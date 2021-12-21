@@ -1,0 +1,26 @@
+.prodTable table thead tr th {
+    background-color : #f2570c !important;
+    color: white !important;
+    
+}
+
+.relProdTable table thead tr th {
+    background-color : #4cad1b !important;
+    color: white !important;
+}
+
+.header-bold {
+    font-weight: var(--lwc-fontWeightBold,700);
+}
+
+.half-width {
+    width: 50%;
+}
+
+.text-right {
+    text-align: right;
+    
+}
+.fif {
+    display: inline;
+}

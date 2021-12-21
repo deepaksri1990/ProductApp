@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "BackupApp",
+      "default": true
+    }
+  ],
+  "name": "FinalProductApp",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "52.0"
+}

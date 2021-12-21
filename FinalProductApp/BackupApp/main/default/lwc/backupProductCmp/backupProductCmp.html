@@ -1,0 +1,64 @@
+<template>
+    <lightning-card>
+        <div class="slds-col slds-m-around_medium">
+            <template if:true={productWrapper}>
+                <div class="slds-var-m-top_medium prodTable">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <th colspan="2">Product Back Information</th>
+                        </thead>
+                        <tr class="">
+                            <th class="half-width" scope="col">
+                                <div class="header-bold" title="Name">Name</div>
+                            </th>
+                            <td class="text-right">
+                                <div>{productWrapper.prodName}</div>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <th class="half-width" scope="col">
+                                <div class="header-bold" title="Product External Id">Product External Id</div>
+                            </th>
+                            <td class="text-right">
+                                <div>{productWrapper.prodExternalId}</div>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <th class="half-width" scope="col">
+                                <div class="header-bold" title="Selling Price">Selling Price</div>
+                            </th>
+                            <td class="text-right">
+                                <div class="fif" if:true={productWrapper.prodPrice}>€</div><div class="fif">{productWrapper.prodPrice}</div>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="slds-var-m-top_medium relProdTable">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <th colspan="2">Related Product Information</th>
+                        </thead>
+                        <tr class="">
+                            <th class="half-width" scope="col">
+                                <div class="header-bold" title="Active">Active</div>
+                            </th>
+                            <td>
+                                <div>{productWrapper.isActive}</div>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <th class="half-width" scope="col">
+                                <div class="header-bold" title="Created Date">Created Date</div>
+                            </th>
+                            <td>
+                                <div>{prdCreatedDate}, {prdCreatedTime}</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
