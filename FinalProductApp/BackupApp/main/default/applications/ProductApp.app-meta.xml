@@ -13,5 +13,4 @@
     <tabs>Product_Backup__c</tabs>
     <tabs>standard-Product2</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>ProductApp_UtilityBar</utilityBar>
 </CustomApplication>

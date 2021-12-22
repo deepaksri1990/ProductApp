@@ -63,13 +63,16 @@ public class ProductsSyncBatch implements Database.Batchable<sObject>, Database.
         EmailUtil.sendEmailToUsers(processedRecords);
     }
 
+/*
+ @description:
+
+//String sch1 = '0 41 9 ? * * *'; //to run the job at 9.41
+//String sch2 = '0 43 23 ? * * *'; //to run the job second time at 23.43
+    
+// we can use below commented code to create a schedule run using crone expression 
+//System.schedule('First Run',sch1 ,new ProductsSyncBatch());
+*/
 public void execute(System.SchedulableContext sc){
-    
-    //String sch1 = '0 41 9 ? * * *'; //to run the job at 9.41
-    //String sch2 = '0 43 23 ? * * *'; //to run the job second time at 23.43
-    
-    // we can use below commented code to create a schedule run using crone expression 
-    //System.schedule('First Run',sch1 ,new ProductsSyncBatch());
     Database.executeBatch(new ProductsSyncBatch());
 }
 }
